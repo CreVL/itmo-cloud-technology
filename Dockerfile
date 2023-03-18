@@ -1,19 +1,12 @@
-FROM google/dart:2.14.3 AS builder
+FROM google/dart
 
 WORKDIR /app
 
-COPY pubspec.* .
-RUN dart pub get
-COPY lib/ /app/lib/
-COPY app/ /app/app/
-RUN dart compile exe lib/app/handle/main.dart -o /app/server
-
-FROM scratch
-
-ENV PORT=8282
-
-COPY --from=builder /app/server /
+ADD pubspec.* /app/
+RUN pub get
+ADD . /app
+RUN pub get --offline
 
 EXPOSE 8282
 
-CMD ["/server"]
+ENTRYPOINT ["/usr/bin/dart", "/app/lib/app/handle/main.dart"]
