@@ -1,0 +1,1452 @@
+* 
+* ==> Audit <==
+* |----------------|--------------------------|----------|-----------------------|---------|---------------------|---------------------|
+|    Command     |           Args           | Profile  |         User          | Version |     Start Time      |      End Time       |
+|----------------|--------------------------|----------|-----------------------|---------|---------------------|---------------------|
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 12 Mar 23 18:37 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 12 Mar 23 18:52 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 12 Mar 23 19:09 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:14 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:28 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:48 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:55 MSK |                     |
+| update-context |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:59 MSK | 15 Mar 23 15:59 MSK |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 15:59 MSK | 15 Mar 23 16:05 MSK |
+| kubectl        | status                   | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 16:06 MSK |                     |
+| kubectl        | -- get pods -A           | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 16:06 MSK | 15 Mar 23 16:06 MSK |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 19:10 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 15 Mar 23 19:21 MSK | 15 Mar 23 19:22 MSK |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 16 Mar 23 13:02 MSK |                     |
+| image          | load docker-cloud-server | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 16 Mar 23 13:07 MSK |                     |
+| image          | ls                       | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 16 Mar 23 13:08 MSK | 16 Mar 23 13:08 MSK |
+| image          | load docker-cloud-server | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 16 Mar 23 13:10 MSK |                     |
+| start          |                          | minikube | DESKTOP-M7BB67G\minni | v1.29.0 | 16 Mar 23 13:13 MSK |                     |
+|----------------|--------------------------|----------|-----------------------|---------|---------------------|---------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2023/03/16 13:13:15
+Running on machine: DESKTOP-M7BB67G
+Binary: Built with gc go1.19.5 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 13:13:15.502630   12552 out.go:296] Setting OutFile to fd 88 ...
+I0316 13:13:15.536934   12552 out.go:343] TERM=,COLORTERM=, which probably does not support color
+I0316 13:13:15.536934   12552 out.go:309] Setting ErrFile to fd 92...
+I0316 13:13:15.536934   12552 out.go:343] TERM=,COLORTERM=, which probably does not support color
+W0316 13:13:15.565899   12552 root.go:311] Error reading config file at C:\Users\minni\.minikube\config\config.json: open C:\Users\minni\.minikube\config\config.json: The system cannot find the file specified.
+I0316 13:13:15.575358   12552 out.go:303] Setting JSON to false
+I0316 13:13:15.585626   12552 start.go:125] hostinfo: {"hostname":"DESKTOP-M7BB67G","uptime":1609,"bootTime":1678959986,"procs":255,"os":"windows","platform":"Microsoft Windows 10 Enterprise","platformFamily":"Standalone Workstation","platformVersion":"10.0.19044.2604 Build 19044.2604","kernelVersion":"10.0.19044.2604 Build 19044.2604","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"74bb1645-f7e1-4e4f-b1bd-918decac18e0"}
+W0316 13:13:15.586143   12552 start.go:133] gopshost.Virtualization returned error: not implemented yet
+I0316 13:13:15.599389   12552 out.go:177] * minikube v1.29.0 на Microsoft Windows 10 Enterprise 10.0.19044.2604 Build 19044.2604
+I0316 13:13:15.601589   12552 notify.go:220] Checking for updates...
+I0316 13:13:15.603193   12552 config.go:180] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.26.1
+I0316 13:13:15.603193   12552 driver.go:365] Setting default libvirt URI to qemu:///system
+I0316 13:13:18.067490   12552 out.go:177] * Используется драйвер hyperv на основе существующего профиля
+I0316 13:13:18.069689   12552 start.go:296] selected driver: hyperv
+I0316 13:13:18.069689   12552 start.go:857] validating driver "hyperv" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:3500 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.17.139.84 Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\minni:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0316 13:13:18.070368   12552 start.go:868] status for hyperv: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0316 13:13:18.132909   12552 cni.go:84] Creating CNI manager for ""
+I0316 13:13:18.132909   12552 cni.go:157] "hyperv" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0316 13:13:18.132909   12552 start_flags.go:319] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:3500 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.17.139.84 Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\minni:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0316 13:13:18.134018   12552 iso.go:125] acquiring lock: {Name:mk6acb9adabecde400b0ddd06ef715647265564d Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0316 13:13:18.135763   12552 out.go:177] * Запускается control plane узел minikube в кластере minikube
+I0316 13:13:18.136988   12552 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0316 13:13:18.137555   12552 preload.go:148] Found local preload: C:\Users\minni\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4
+I0316 13:13:18.137555   12552 cache.go:57] Caching tarball of preloaded images
+I0316 13:13:18.138125   12552 preload.go:174] Found C:\Users\minni\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.26.1-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0316 13:13:18.138125   12552 cache.go:60] Finished verifying existence of preloaded tar for  v1.26.1 on docker
+I0316 13:13:18.138688   12552 profile.go:148] Saving config to C:\Users\minni\.minikube\profiles\minikube\config.json ...
+I0316 13:13:18.142105   12552 cache.go:193] Successfully downloaded all kic artifacts
+I0316 13:13:18.143148   12552 start.go:364] acquiring machines lock for minikube: {Name:mk46b69dcb5de5bf49cfe138508419995a9f6c27 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0316 13:13:18.143180   12552 start.go:368] acquired machines lock for "minikube" in 0s
+I0316 13:13:18.143180   12552 start.go:96] Skipping create...Using existing machine configuration
+I0316 13:13:18.143180   12552 fix.go:55] fixHost starting: 
+I0316 13:13:18.144276   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:19.263724   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:19.263724   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:19.263724   12552 fix.go:103] recreateIfNeeded on minikube: state=Running err=<nil>
+W0316 13:13:19.263724   12552 fix.go:129] unexpected machine state, will restart: <nil>
+I0316 13:13:19.277065   12552 out.go:177] * Обновляется работающий hyperv "minikube" VM ...
+I0316 13:13:19.278236   12552 machine.go:88] provisioning docker machine ...
+I0316 13:13:19.278236   12552 buildroot.go:166] provisioning hostname "minikube"
+I0316 13:13:19.278236   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:20.374487   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:20.374487   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:20.374487   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:21.932622   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:21.932622   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:21.945498   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:21.946611   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:21.946611   12552 main.go:141] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I0316 13:13:22.134005   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0316 13:13:22.134005   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:23.300254   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:23.300254   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:23.300254   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:24.878482   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:24.878482   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:24.886052   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:24.886636   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:24.886636   12552 main.go:141] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0316 13:13:25.050060   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: 
+I0316 13:13:25.050060   12552 buildroot.go:172] set auth options {CertDir:C:\Users\minni\.minikube CaCertPath:C:\Users\minni\.minikube\certs\ca.pem CaPrivateKeyPath:C:\Users\minni\.minikube\certs\ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:C:\Users\minni\.minikube\machines\server.pem ServerKeyPath:C:\Users\minni\.minikube\machines\server-key.pem ClientKeyPath:C:\Users\minni\.minikube\certs\key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:C:\Users\minni\.minikube\certs\cert.pem ServerCertSANs:[] StorePath:C:\Users\minni\.minikube}
+I0316 13:13:25.050060   12552 buildroot.go:174] setting up certificates
+I0316 13:13:25.050060   12552 provision.go:83] configureAuth start
+I0316 13:13:25.050587   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:26.386544   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:26.386544   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:26.387253   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:28.182094   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:28.182094   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:28.182094   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:29.381274   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:29.381274   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:29.381274   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:31.158289   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:31.158289   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:31.158289   12552 provision.go:138] copyHostCerts
+I0316 13:13:31.158939   12552 exec_runner.go:144] found C:\Users\minni\.minikube/ca.pem, removing ...
+I0316 13:13:31.158939   12552 exec_runner.go:207] rm: C:\Users\minni\.minikube\ca.pem
+I0316 13:13:31.159530   12552 exec_runner.go:151] cp: C:\Users\minni\.minikube\certs\ca.pem --> C:\Users\minni\.minikube/ca.pem (1074 bytes)
+I0316 13:13:31.162652   12552 exec_runner.go:144] found C:\Users\minni\.minikube/cert.pem, removing ...
+I0316 13:13:31.162652   12552 exec_runner.go:207] rm: C:\Users\minni\.minikube\cert.pem
+I0316 13:13:31.163208   12552 exec_runner.go:151] cp: C:\Users\minni\.minikube\certs\cert.pem --> C:\Users\minni\.minikube/cert.pem (1119 bytes)
+I0316 13:13:31.166258   12552 exec_runner.go:144] found C:\Users\minni\.minikube/key.pem, removing ...
+I0316 13:13:31.166258   12552 exec_runner.go:207] rm: C:\Users\minni\.minikube\key.pem
+I0316 13:13:31.167543   12552 exec_runner.go:151] cp: C:\Users\minni\.minikube\certs\key.pem --> C:\Users\minni\.minikube/key.pem (1675 bytes)
+I0316 13:13:31.169665   12552 provision.go:112] generating server cert: C:\Users\minni\.minikube\machines\server.pem ca-key=C:\Users\minni\.minikube\certs\ca.pem private-key=C:\Users\minni\.minikube\certs\ca-key.pem org=minni.minikube san=[172.20.113.250 172.20.113.250 localhost 127.0.0.1 minikube minikube]
+I0316 13:13:31.938897   12552 provision.go:172] copyRemoteCerts
+I0316 13:13:31.959283   12552 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0316 13:13:31.959283   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:33.203053   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:33.203053   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:33.203053   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:34.878328   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:34.878328   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:34.878328   12552 sshutil.go:53] new ssh client: &{IP:172.20.113.250 Port:22 SSHKeyPath:C:\Users\minni\.minikube\machines\minikube\id_rsa Username:docker}
+I0316 13:13:34.995993   12552 ssh_runner.go:235] Completed: sudo mkdir -p /etc/docker /etc/docker /etc/docker: (3.0367099s)
+I0316 13:13:34.997840   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\certs\ca.pem --> /etc/docker/ca.pem (1074 bytes)
+I0316 13:13:35.050037   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\machines\server.pem --> /etc/docker/server.pem (1196 bytes)
+I0316 13:13:35.104419   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\machines\server-key.pem --> /etc/docker/server-key.pem (1675 bytes)
+I0316 13:13:35.140959   12552 provision.go:86] duration metric: configureAuth took 10.0908993s
+I0316 13:13:35.140959   12552 buildroot.go:189] setting minikube options for container-runtime
+I0316 13:13:35.142070   12552 config.go:180] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.26.1
+I0316 13:13:35.142070   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:36.333455   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:36.333601   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:36.333601   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:38.031983   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:38.031983   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:38.040171   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:38.040707   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:38.040707   12552 main.go:141] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0316 13:13:38.192347   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: tmpfs
+
+I0316 13:13:38.192347   12552 buildroot.go:70] root file system type: tmpfs
+I0316 13:13:38.192927   12552 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I0316 13:13:38.192927   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:39.344025   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:39.344025   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:39.344025   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:41.002072   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:41.002072   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:41.016112   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:41.016700   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:41.016700   12552 main.go:141] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=hyperv --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0316 13:13:41.211123   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=hyperv --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I0316 13:13:41.211175   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:42.392327   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:42.392327   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:42.392327   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:44.112045   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:44.112095   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:44.120794   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:44.121422   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:44.121422   12552 main.go:141] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0316 13:13:44.329500   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: 
+I0316 13:13:44.329500   12552 machine.go:91] provisioned docker machine in 25.0512644s
+I0316 13:13:44.329500   12552 start.go:300] post-start starting for "minikube" (driver="hyperv")
+I0316 13:13:44.329500   12552 start.go:328] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0316 13:13:44.367114   12552 ssh_runner.go:195] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0316 13:13:44.367114   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:45.736915   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:45.736915   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:45.736915   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:47.575861   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:47.575861   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:47.576137   12552 sshutil.go:53] new ssh client: &{IP:172.20.113.250 Port:22 SSHKeyPath:C:\Users\minni\.minikube\machines\minikube\id_rsa Username:docker}
+I0316 13:13:47.705329   12552 ssh_runner.go:235] Completed: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs: (3.3382147s)
+I0316 13:13:47.730401   12552 ssh_runner.go:195] Run: cat /etc/os-release
+I0316 13:13:47.738607   12552 info.go:137] Remote host: Buildroot 2021.02.12
+I0316 13:13:47.739222   12552 filesync.go:126] Scanning C:\Users\minni\.minikube\addons for local assets ...
+I0316 13:13:47.739787   12552 filesync.go:126] Scanning C:\Users\minni\.minikube\files for local assets ...
+I0316 13:13:47.739787   12552 start.go:303] post-start completed in 3.4102866s
+I0316 13:13:47.739787   12552 fix.go:57] fixHost completed within 29.5966067s
+I0316 13:13:47.739787   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:48.886126   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:48.886126   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:48.886126   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:50.559607   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:50.559607   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:50.577832   12552 main.go:141] libmachine: Using SSH client type: native
+I0316 13:13:50.578411   12552 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x4dfbc0] 0x4e2b40 <nil>  [] 0s} 172.20.113.250 22 <nil> <nil>}
+I0316 13:13:50.578942   12552 main.go:141] libmachine: About to run SSH command:
+date +%!s(MISSING).%!N(MISSING)
+I0316 13:13:50.756897   12552 main.go:141] libmachine: SSH cmd err, output: <nil>: 1678961629.443347839
+
+I0316 13:13:50.756960   12552 fix.go:207] guest clock: 1678961629.443347839
+I0316 13:13:50.756960   12552 fix.go:220] Guest: 2023-03-16 13:13:49.443347839 +0300 MSK Remote: 2023-03-16 13:13:47.7397871 +0300 MSK m=+32.466686901 (delta=1.703560739s)
+I0316 13:13:50.756960   12552 fix.go:191] guest clock delta is within tolerance: 1.703560739s
+I0316 13:13:50.756960   12552 start.go:83] releasing machines lock for "minikube", held for 32.6137805s
+I0316 13:13:50.756960   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:51.947997   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:51.947997   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:51.947997   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:53.750022   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:53.750022   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:53.763794   12552 ssh_runner.go:195] Run: curl -sS -m 2 https://registry.k8s.io/
+I0316 13:13:53.763794   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:53.795743   12552 ssh_runner.go:195] Run: cat /version.json
+I0316 13:13:53.795743   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0316 13:13:54.884253   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:54.884253   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:54.884253   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:54.912385   12552 main.go:141] libmachine: [stdout =====>] : Running
+
+I0316 13:13:54.912385   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:54.912385   12552 main.go:141] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0316 13:13:56.462750   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:56.462750   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:56.462750   12552 sshutil.go:53] new ssh client: &{IP:172.20.113.250 Port:22 SSHKeyPath:C:\Users\minni\.minikube\machines\minikube\id_rsa Username:docker}
+I0316 13:13:56.484197   12552 main.go:141] libmachine: [stdout =====>] : 172.20.113.250
+
+I0316 13:13:56.484197   12552 main.go:141] libmachine: [stderr =====>] : 
+I0316 13:13:56.484754   12552 sshutil.go:53] new ssh client: &{IP:172.20.113.250 Port:22 SSHKeyPath:C:\Users\minni\.minikube\machines\minikube\id_rsa Username:docker}
+I0316 13:13:56.566965   12552 ssh_runner.go:235] Completed: cat /version.json: (2.7712221s)
+I0316 13:13:56.593912   12552 ssh_runner.go:195] Run: systemctl --version
+I0316 13:13:56.652253   12552 ssh_runner.go:235] Completed: curl -sS -m 2 https://registry.k8s.io/: (2.8884597s)
+I0316 13:13:56.670500   12552 ssh_runner.go:195] Run: sh -c "stat /etc/cni/net.d/*loopback.conf*"
+W0316 13:13:56.685795   12552 cni.go:208] loopback cni configuration skipped: "/etc/cni/net.d/*loopback.conf*" not found
+I0316 13:13:56.703149   12552 ssh_runner.go:195] Run: sudo mkdir -p /etc/systemd/system/cri-docker.service.d
+I0316 13:13:56.722010   12552 ssh_runner.go:362] scp memory --> /etc/systemd/system/cri-docker.service.d/10-cni.conf (135 bytes)
+I0316 13:13:56.786446   12552 ssh_runner.go:195] Run: sudo find /etc/cni/net.d -maxdepth 1 -type f ( ( -name *bridge* -or -name *podman* ) -and -not -name *.mk_disabled ) -printf "%!p(MISSING), " -exec sh -c "sudo mv {} {}.mk_disabled" ;
+I0316 13:13:56.800491   12552 cni.go:258] no active bridge cni configs found in "/etc/cni/net.d" - nothing to disable
+I0316 13:13:56.800491   12552 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0316 13:13:56.811714   12552 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0316 13:13:56.845980   12552 docker.go:630] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.26.1
+registry.k8s.io/kube-scheduler:v1.26.1
+registry.k8s.io/kube-controller-manager:v1.26.1
+registry.k8s.io/kube-proxy:v1.26.1
+registry.k8s.io/etcd:3.5.6-0
+registry.k8s.io/pause:3.9
+registry.k8s.io/coredns/coredns:v1.9.3
+registry.k8s.io/pause:3.6
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0316 13:13:56.845980   12552 docker.go:560] Images already preloaded, skipping extraction
+I0316 13:13:56.845980   12552 start.go:483] detecting cgroup driver to use...
+I0316 13:13:56.846529   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///run/containerd/containerd.sock
+image-endpoint: unix:///run/containerd/containerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0316 13:13:56.885368   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i -r 's|^( *)sandbox_image = .*$|\1sandbox_image = "registry.k8s.io/pause:3.9"|' /etc/containerd/config.toml"
+I0316 13:13:56.928993   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i -r 's|^( *)restrict_oom_score_adj = .*$|\1restrict_oom_score_adj = false|' /etc/containerd/config.toml"
+I0316 13:13:56.946210   12552 containerd.go:145] configuring containerd to use "cgroupfs" as cgroup driver...
+I0316 13:13:56.961264   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i -r 's|^( *)SystemdCgroup = .*$|\1SystemdCgroup = false|g' /etc/containerd/config.toml"
+I0316 13:13:56.995890   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i 's|"io.containerd.runtime.v1.linux"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0316 13:13:57.034871   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i '/systemd_cgroup/d' /etc/containerd/config.toml"
+I0316 13:13:57.080691   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i 's|"io.containerd.runc.v1"|"io.containerd.runc.v2"|g' /etc/containerd/config.toml"
+I0316 13:13:57.124911   12552 ssh_runner.go:195] Run: sh -c "sudo rm -rf /etc/cni/net.mk"
+I0316 13:13:57.165211   12552 ssh_runner.go:195] Run: sh -c "sudo sed -i -r 's|^( *)conf_dir = .*$|\1conf_dir = "/etc/cni/net.d"|g' /etc/containerd/config.toml"
+I0316 13:13:57.201443   12552 ssh_runner.go:195] Run: sudo sysctl net.bridge.bridge-nf-call-iptables
+I0316 13:13:57.258041   12552 ssh_runner.go:195] Run: sudo sh -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+I0316 13:13:57.295802   12552 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0316 13:13:57.548158   12552 ssh_runner.go:195] Run: sudo systemctl restart containerd
+I0316 13:13:57.582566   12552 start.go:483] detecting cgroup driver to use...
+I0316 13:13:57.606129   12552 ssh_runner.go:195] Run: sudo systemctl cat docker.service
+I0316 13:13:57.658044   12552 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service containerd
+I0316 13:13:57.699573   12552 ssh_runner.go:195] Run: sudo systemctl stop -f containerd
+I0316 13:13:57.755120   12552 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service containerd
+I0316 13:13:57.801445   12552 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service crio
+I0316 13:13:57.823228   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+image-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0316 13:13:57.872319   12552 ssh_runner.go:195] Run: sudo systemctl unmask docker.service
+I0316 13:13:58.176642   12552 ssh_runner.go:195] Run: sudo systemctl enable docker.socket
+I0316 13:13:58.438633   12552 docker.go:529] configuring docker to use "cgroupfs" as cgroup driver...
+I0316 13:13:58.438633   12552 ssh_runner.go:362] scp memory --> /etc/docker/daemon.json (144 bytes)
+I0316 13:13:58.491367   12552 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0316 13:13:58.843376   12552 ssh_runner.go:195] Run: sudo systemctl restart docker
+I0316 13:14:01.138899   12552 ssh_runner.go:235] Completed: sudo systemctl restart docker: (2.2954809s)
+I0316 13:14:01.160030   12552 ssh_runner.go:195] Run: sudo systemctl enable cri-docker.socket
+I0316 13:14:01.380453   12552 ssh_runner.go:195] Run: sudo systemctl unmask cri-docker.socket
+I0316 13:14:01.645863   12552 ssh_runner.go:195] Run: sudo systemctl enable cri-docker.socket
+I0316 13:14:01.944594   12552 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0316 13:14:02.385838   12552 ssh_runner.go:195] Run: sudo systemctl restart cri-docker.socket
+I0316 13:14:02.428097   12552 start.go:530] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0316 13:14:02.449412   12552 ssh_runner.go:195] Run: stat /var/run/cri-dockerd.sock
+I0316 13:14:02.462001   12552 start.go:551] Will wait 60s for crictl version
+I0316 13:14:02.480799   12552 ssh_runner.go:195] Run: which crictl
+I0316 13:14:02.506360   12552 ssh_runner.go:195] Run: sudo /usr/bin/crictl version
+I0316 13:14:02.894444   12552 start.go:567] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  20.10.23
+RuntimeApiVersion:  v1alpha2
+I0316 13:14:02.906800   12552 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0316 13:14:03.046487   12552 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0316 13:14:03.176842   12552 out.go:204] * Подготавливается Kubernetes v1.26.1 на Docker 20.10.23 ...
+I0316 13:14:03.179529   12552 ip.go:172] getIPForInterface: searching for "vEthernet (Default Switch)"
+I0316 13:14:03.198397   12552 ip.go:186] "Ethernet" does not match prefix "vEthernet (Default Switch)"
+I0316 13:14:03.198397   12552 ip.go:181] found prefix matching interface for "vEthernet (Default Switch)": "vEthernet (Default Switch)"
+I0316 13:14:03.198397   12552 ip.go:207] Found interface: {Index:39 MTU:1500 Name:vEthernet (Default Switch) HardwareAddr:00:15:5d:7f:a8:70 Flags:up|broadcast|multicast}
+I0316 13:14:03.217761   12552 ip.go:210] interface addr: fe80::2243:45b6:ba50:84b4/64
+I0316 13:14:03.217761   12552 ip.go:210] interface addr: 172.20.112.1/20
+I0316 13:14:03.245427   12552 ssh_runner.go:195] Run: grep 172.20.112.1	host.minikube.internal$ /etc/hosts
+I0316 13:14:03.254748   12552 preload.go:132] Checking if preload exists for k8s version v1.26.1 and runtime docker
+I0316 13:14:03.279906   12552 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0316 13:14:03.346882   12552 docker.go:630] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.26.1
+registry.k8s.io/kube-controller-manager:v1.26.1
+registry.k8s.io/kube-scheduler:v1.26.1
+registry.k8s.io/kube-proxy:v1.26.1
+registry.k8s.io/etcd:3.5.6-0
+registry.k8s.io/pause:3.9
+registry.k8s.io/coredns/coredns:v1.9.3
+registry.k8s.io/pause:3.6
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0316 13:14:03.346882   12552 docker.go:560] Images already preloaded, skipping extraction
+I0316 13:14:03.367031   12552 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0316 13:14:03.444961   12552 docker.go:630] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.26.1
+registry.k8s.io/kube-scheduler:v1.26.1
+registry.k8s.io/kube-controller-manager:v1.26.1
+registry.k8s.io/kube-proxy:v1.26.1
+registry.k8s.io/etcd:3.5.6-0
+registry.k8s.io/pause:3.9
+registry.k8s.io/coredns/coredns:v1.9.3
+registry.k8s.io/pause:3.6
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0316 13:14:03.444961   12552 cache_images.go:84] Images are preloaded, skipping loading
+I0316 13:14:03.463017   12552 ssh_runner.go:195] Run: docker info --format {{.CgroupDriver}}
+I0316 13:14:03.554759   12552 cni.go:84] Creating CNI manager for ""
+I0316 13:14:03.554759   12552 cni.go:157] "hyperv" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I0316 13:14:03.554759   12552 kubeadm.go:87] Using pod CIDR: 10.244.0.0/16
+I0316 13:14:03.554759   12552 kubeadm.go:172] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:172.17.139.84 APIServerPort:8443 KubernetesVersion:v1.26.1 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:minikube NodeName:minikube DNSDomain:cluster.local CRISocket:/var/run/cri-dockerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "172.17.139.84"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NodeIP:172.17.139.84 CgroupDriver:cgroupfs ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[] ResolvConfSearchRegression:false KubeletConfigOpts:map[hairpinMode:hairpin-veth runtimeRequestTimeout:15m]}
+I0316 13:14:03.555330   12552 kubeadm.go:177] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 172.17.139.84
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: /var/run/cri-dockerd.sock
+  name: "minikube"
+  kubeletExtraArgs:
+    node-ip: 172.17.139.84
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "172.17.139.84"]
+  extraArgs:
+    enable-admission-plugins: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: "true"
+    leader-elect: "false"
+scheduler:
+  extraArgs:
+    leader-elect: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+    extraArgs:
+      proxy-refresh-interval: "70000"
+kubernetesVersion: v1.26.1
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: cgroupfs
+hairpinMode: hairpin-veth
+runtimeRequestTimeout: 15m
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%!"(MISSING)
+  nodefs.inodesFree: "0%!"(MISSING)
+  imagefs.available: "0%!"(MISSING)
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0316 13:14:03.555330   12552 kubeadm.go:968] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.26.1/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime=remote --container-runtime-endpoint=/var/run/cri-dockerd.sock --hostname-override=minikube --image-service-endpoint=/var/run/cri-dockerd.sock --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=172.17.139.84
+
+[Install]
+ config:
+{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:}
+I0316 13:14:03.579184   12552 ssh_runner.go:195] Run: sudo ls /var/lib/minikube/binaries/v1.26.1
+I0316 13:14:03.601796   12552 binaries.go:44] Found k8s binaries, skipping transfer
+I0316 13:14:03.638737   12552 ssh_runner.go:195] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0316 13:14:03.647361   12552 ssh_runner.go:362] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (441 bytes)
+I0316 13:14:03.682895   12552 ssh_runner.go:362] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0316 13:14:03.708560   12552 ssh_runner.go:362] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2087 bytes)
+I0316 13:14:03.768134   12552 ssh_runner.go:195] Run: grep 172.17.139.84	control-plane.minikube.internal$ /etc/hosts
+I0316 13:14:03.774964   12552 certs.go:56] Setting up C:\Users\minni\.minikube\profiles\minikube for IP: 172.17.139.84
+I0316 13:14:03.775577   12552 certs.go:186] acquiring lock for shared ca certs: {Name:mk1b486163f66e83f0ece5de07a052dbcfc22fcd Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0316 13:14:03.776227   12552 certs.go:195] skipping minikubeCA CA generation: C:\Users\minni\.minikube\ca.key
+I0316 13:14:03.777100   12552 certs.go:195] skipping proxyClientCA CA generation: C:\Users\minni\.minikube\proxy-client-ca.key
+I0316 13:14:03.778355   12552 certs.go:311] skipping minikube-user signed cert generation: C:\Users\minni\.minikube\profiles\minikube\client.key
+I0316 13:14:03.778355   12552 certs.go:311] skipping minikube signed cert generation: C:\Users\minni\.minikube\profiles\minikube\apiserver.key.87e06cda
+I0316 13:14:03.779038   12552 certs.go:311] skipping aggregator signed cert generation: C:\Users\minni\.minikube\profiles\minikube\proxy-client.key
+I0316 13:14:03.780930   12552 certs.go:401] found cert: C:\Users\minni\.minikube\certs\C:\Users\minni\.minikube\certs\ca-key.pem (1675 bytes)
+I0316 13:14:03.780960   12552 certs.go:401] found cert: C:\Users\minni\.minikube\certs\C:\Users\minni\.minikube\certs\ca.pem (1074 bytes)
+I0316 13:14:03.781626   12552 certs.go:401] found cert: C:\Users\minni\.minikube\certs\C:\Users\minni\.minikube\certs\cert.pem (1119 bytes)
+I0316 13:14:03.781626   12552 certs.go:401] found cert: C:\Users\minni\.minikube\certs\C:\Users\minni\.minikube\certs\key.pem (1675 bytes)
+I0316 13:14:03.784457   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\profiles\minikube\apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1399 bytes)
+I0316 13:14:03.827641   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\profiles\minikube\apiserver.key --> /var/lib/minikube/certs/apiserver.key (1679 bytes)
+I0316 13:14:03.867620   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\profiles\minikube\proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0316 13:14:03.910275   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\profiles\minikube\proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1675 bytes)
+I0316 13:14:03.947731   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0316 13:14:03.989503   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0316 13:14:04.026937   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0316 13:14:04.064768   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1675 bytes)
+I0316 13:14:04.114014   12552 ssh_runner.go:362] scp C:\Users\minni\.minikube\ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0316 13:14:04.179505   12552 ssh_runner.go:362] scp memory --> /var/lib/minikube/kubeconfig (738 bytes)
+I0316 13:14:04.221854   12552 ssh_runner.go:195] Run: openssl version
+I0316 13:14:04.245669   12552 ssh_runner.go:195] Run: sudo /bin/bash -c "test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem"
+I0316 13:14:04.278844   12552 ssh_runner.go:195] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0316 13:14:04.286296   12552 certs.go:444] hashing: -rw-r--r-- 1 root root 1111 Mar 15 13:04 /usr/share/ca-certificates/minikubeCA.pem
+I0316 13:14:04.302353   12552 ssh_runner.go:195] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0316 13:14:04.334706   12552 ssh_runner.go:195] Run: sudo /bin/bash -c "test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0"
+I0316 13:14:04.347548   12552 kubeadm.go:401] StartCluster: {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.29.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.37@sha256:8bf7a0e8a062bc5e2b71d28b35bfa9cc862d9220e234e86176b3785f685d8b15 Memory:3500 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.26.1 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.17.139.84 Port:8443 KubernetesVersion:v1.26.1 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\minni:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP:}
+I0316 13:14:04.360608   12552 ssh_runner.go:195] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0316 13:14:04.417758   12552 ssh_runner.go:195] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0316 13:14:04.430117   12552 kubeadm.go:416] found existing configuration files, will attempt cluster restart
+I0316 13:14:04.430117   12552 kubeadm.go:633] restartCluster start
+I0316 13:14:04.451188   12552 ssh_runner.go:195] Run: sudo test -d /data/minikube
+I0316 13:14:04.461142   12552 kubeadm.go:127] /data/minikube skipping compat symlinks: sudo test -d /data/minikube: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:04.466796   12552 kubeconfig.go:92] found "minikube" server: "https://172.17.139.84:8443"
+I0316 13:14:04.488251   12552 ssh_runner.go:195] Run: sudo diff -u /var/tmp/minikube/kubeadm.yaml /var/tmp/minikube/kubeadm.yaml.new
+I0316 13:14:04.517732   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:04.545162   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:04.641615   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:05.148572   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:05.184120   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:05.205948   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:05.652745   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:05.687640   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:05.712857   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:06.154482   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:06.185369   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:06.207405   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:06.657154   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:06.694861   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:06.718841   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:07.154136   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:07.182849   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:07.214647   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:07.642726   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:07.678891   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:07.697976   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:08.148346   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:08.185098   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:08.216090   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:08.650582   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:08.677761   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:08.702638   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:09.149807   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:09.182167   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:09.209828   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:09.655307   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:09.684203   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:09.720086   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:10.160983   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:10.193315   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:10.222941   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:10.648312   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:10.675375   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:10.701640   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:11.147719   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:11.181514   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:11.206027   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:11.657260   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:11.707504   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:11.738540   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:12.165143   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:12.199140   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:12.223256   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:12.643986   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:12.662696   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:12.681376   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:13.156292   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:13.199128   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:13.229132   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:13.643557   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:13.674074   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:13.700683   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:14.147962   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:14.204752   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:14.235012   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:14.642372   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:14.671037   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:14.713942   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:14.713942   12552 api_server.go:165] Checking apiserver status ...
+I0316 13:14:14.736901   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+W0316 13:14:14.757432   12552 api_server.go:169] stopped: unable to get apiserver pid: sudo pgrep -xnf kube-apiserver.*minikube.*: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:14.757432   12552 kubeadm.go:608] needs reconfigure: apiserver error: timed out waiting for the condition
+I0316 13:14:14.757432   12552 kubeadm.go:1120] stopping kube-system containers ...
+I0316 13:14:14.774269   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0316 13:14:14.835594   12552 docker.go:456] Stopping containers: [9f2b3808450b 10b76146bac3 45dfb44a74f9 eaf76dd78215 f763d872696d 33b98fdbcb2d eca8f477fef3 d15221789ca6 53a503772e81 48c730b2cd3b 00b46cb1c5aa 93885efbb627 a42b451ddd20 ff74a656f38b fb5aad0597ec 39acd0d41e79 f6f4299f4e7f 7e08c1a764d6 52c89afb38d0 9e6579d08932 4b32b4b84d5d 310fd2b58b1c 66b582812a3c 38c120fcdb30 5a4b193b71c7]
+I0316 13:14:14.864603   12552 ssh_runner.go:195] Run: docker stop 9f2b3808450b 10b76146bac3 45dfb44a74f9 eaf76dd78215 f763d872696d 33b98fdbcb2d eca8f477fef3 d15221789ca6 53a503772e81 48c730b2cd3b 00b46cb1c5aa 93885efbb627 a42b451ddd20 ff74a656f38b fb5aad0597ec 39acd0d41e79 f6f4299f4e7f 7e08c1a764d6 52c89afb38d0 9e6579d08932 4b32b4b84d5d 310fd2b58b1c 66b582812a3c 38c120fcdb30 5a4b193b71c7
+I0316 13:14:16.231865   12552 ssh_runner.go:235] Completed: docker stop 9f2b3808450b 10b76146bac3 45dfb44a74f9 eaf76dd78215 f763d872696d 33b98fdbcb2d eca8f477fef3 d15221789ca6 53a503772e81 48c730b2cd3b 00b46cb1c5aa 93885efbb627 a42b451ddd20 ff74a656f38b fb5aad0597ec 39acd0d41e79 f6f4299f4e7f 7e08c1a764d6 52c89afb38d0 9e6579d08932 4b32b4b84d5d 310fd2b58b1c 66b582812a3c 38c120fcdb30 5a4b193b71c7: (1.3672618s)
+I0316 13:14:16.257495   12552 ssh_runner.go:195] Run: sudo systemctl stop kubelet
+I0316 13:14:16.491542   12552 ssh_runner.go:195] Run: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+I0316 13:14:16.516566   12552 kubeadm.go:155] found existing configuration files:
+-rw------- 1 root root 5643 Mar 15 13:04 /etc/kubernetes/admin.conf
+-rw------- 1 root root 5653 Mar 16 10:03 /etc/kubernetes/controller-manager.conf
+-rw------- 1 root root 1971 Mar 15 13:04 /etc/kubernetes/kubelet.conf
+-rw------- 1 root root 5601 Mar 16 10:03 /etc/kubernetes/scheduler.conf
+
+I0316 13:14:16.540592   12552 ssh_runner.go:195] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/admin.conf
+I0316 13:14:16.572402   12552 ssh_runner.go:195] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/kubelet.conf
+I0316 13:14:16.603728   12552 ssh_runner.go:195] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf
+I0316 13:14:16.639405   12552 kubeadm.go:166] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/controller-manager.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/controller-manager.conf: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:16.661125   12552 ssh_runner.go:195] Run: sudo rm -f /etc/kubernetes/controller-manager.conf
+I0316 13:14:16.707069   12552 ssh_runner.go:195] Run: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf
+I0316 13:14:16.728806   12552 kubeadm.go:166] "https://control-plane.minikube.internal:8443" may not be in /etc/kubernetes/scheduler.conf - will remove: sudo grep https://control-plane.minikube.internal:8443 /etc/kubernetes/scheduler.conf: Process exited with status 1
+stdout:
+
+stderr:
+I0316 13:14:16.746919   12552 ssh_runner.go:195] Run: sudo rm -f /etc/kubernetes/scheduler.conf
+I0316 13:14:16.852393   12552 ssh_runner.go:195] Run: sudo cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+I0316 13:14:16.871316   12552 kubeadm.go:710] reconfiguring cluster from /var/tmp/minikube/kubeadm.yaml
+I0316 13:14:16.871316   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase certs all --config /var/tmp/minikube/kubeadm.yaml"
+I0316 13:14:17.033209   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase kubeconfig all --config /var/tmp/minikube/kubeadm.yaml"
+I0316 13:14:19.901292   12552 ssh_runner.go:235] Completed: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase kubeconfig all --config /var/tmp/minikube/kubeadm.yaml": (2.8680833s)
+I0316 13:14:19.901292   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase kubelet-start --config /var/tmp/minikube/kubeadm.yaml"
+I0316 13:14:20.292378   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase control-plane all --config /var/tmp/minikube/kubeadm.yaml"
+I0316 13:14:20.413555   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.26.1:$PATH" kubeadm init phase etcd local --config /var/tmp/minikube/kubeadm.yaml"
+I0316 13:14:20.590330   12552 api_server.go:51] waiting for apiserver process to appear ...
+I0316 13:14:20.641162   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0316 13:14:21.195857   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0316 13:14:21.723921   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0316 13:14:22.199456   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0316 13:14:22.699725   12552 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0316 13:14:22.756570   12552 api_server.go:71] duration metric: took 2.1662402s to wait for apiserver process to appear ...
+I0316 13:14:22.756570   12552 api_server.go:87] waiting for apiserver healthz status ...
+I0316 13:14:22.756570   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:27.763565   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:28.280769   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:33.285381   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:33.777458   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:38.781837   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:39.264510   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:44.281419   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": dial tcp 172.17.139.84:8443: i/o timeout (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:44.778597   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:49.792994   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:50.289397   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:14:55.295250   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:14:55.779074   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:00.796539   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:01.277206   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:06.293882   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:06.776802   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:11.785990   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:12.271885   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:17.280902   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:17.776547   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:22.778556   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:22.814574   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:15:22.860694   12552 logs.go:279] 2 containers: [4e449087641a 5bff8299e26c]
+I0316 13:15:22.875134   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:15:22.922681   12552 logs.go:279] 1 containers: [0caec22bde69]
+I0316 13:15:22.936670   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:15:22.976197   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:15:22.995515   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:15:23.035804   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:15:23.051773   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:15:23.085066   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:15:23.099058   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:15:23.134410   12552 logs.go:279] 0 containers: []
+W0316 13:15:23.134410   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:15:23.148855   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:15:23.192980   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:15:23.208121   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:15:23.244758   12552 logs.go:279] 2 containers: [eae75cb6f565 eca8f477fef3]
+I0316 13:15:23.244758   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:15:23.244758   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:15:23.397445   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:15:23.397445   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:15:23.427804   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:15:23.427804   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:15:23.469243   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:15:23.469243   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:15:23.511620   12552 logs.go:124] Gathering logs for kube-controller-manager [eca8f477fef3] ...
+I0316 13:15:23.511620   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eca8f477fef3"
+I0316 13:15:23.546702   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:15:23.546702   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:15:23.640805   12552 logs.go:124] Gathering logs for kube-apiserver [5bff8299e26c] ...
+I0316 13:15:23.640805   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 5bff8299e26c"
+I0316 13:15:23.691679   12552 logs.go:124] Gathering logs for etcd [0caec22bde69] ...
+I0316 13:15:23.691679   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 0caec22bde69"
+I0316 13:15:23.736109   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:15:23.736109   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:15:23.791864   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:15:23.791864   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:15:23.909079   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:15:23.909079   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:15:23.981343   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:15:23.981343   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+I0316 13:15:27.088015   12552 ssh_runner.go:235] Completed: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": (3.1066716s)
+W0316 13:15:27.088015   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:15:25.760993  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused - error from a previous attempt: read tcp 127.0.0.1:44186->127.0.0.1:8443: read: connection reset by peer
+E0316 10:15:25.764015  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.766012  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.767389  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.768126  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:15:25.760993  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused - error from a previous attempt: read tcp 127.0.0.1:44186->127.0.0.1:8443: read: connection reset by peer
+E0316 10:15:25.764015  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.766012  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.767389  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:25.768126  345812 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:15:27.088015   12552 logs.go:124] Gathering logs for kube-apiserver [4e449087641a] ...
+I0316 13:15:27.088015   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 4e449087641a"
+I0316 13:15:27.145176   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:15:27.145176   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:15:27.197304   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:15:27.197304   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:15:29.765089   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:34.782712   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": dial tcp 172.17.139.84:8443: i/o timeout (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:35.287203   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:15:35.338409   12552 logs.go:279] 1 containers: [4e449087641a]
+I0316 13:15:35.365180   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:15:35.416820   12552 logs.go:279] 1 containers: [0caec22bde69]
+I0316 13:15:35.441654   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:15:35.491924   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:15:35.505446   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:15:35.547892   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:15:35.569621   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:15:35.604801   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:15:35.628990   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:15:35.677661   12552 logs.go:279] 0 containers: []
+W0316 13:15:35.677661   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:15:35.690843   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:15:35.721468   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:15:35.733779   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:15:35.763702   12552 logs.go:279] 2 containers: [eae75cb6f565 eca8f477fef3]
+I0316 13:15:35.763702   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:15:35.763702   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:15:35.803429   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:15:35.803429   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:15:35.894177   12552 logs.go:124] Gathering logs for kube-controller-manager [eca8f477fef3] ...
+I0316 13:15:35.894177   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eca8f477fef3"
+I0316 13:15:35.934313   12552 logs.go:124] Gathering logs for etcd [0caec22bde69] ...
+I0316 13:15:35.934313   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 0caec22bde69"
+I0316 13:15:35.969292   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:15:35.969292   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:15:36.039321   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:15:36.039321   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:15:36.079011   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:15:36.079011   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:15:36.120606   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:15:36.120606   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:15:36.182041   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:15:36.182041   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:15:36.210004   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:15:36.210516   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:15:36.303974   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:15:34.979346  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.979889  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.982390  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.983286  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.985456  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:15:34.979346  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.979889  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.982390  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.983286  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:34.985456  346027 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:15:36.303974   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:15:36.303974   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:15:36.338450   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:15:36.338450   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:15:36.459223   12552 logs.go:124] Gathering logs for kube-apiserver [4e449087641a] ...
+I0316 13:15:36.459223   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 4e449087641a"
+I0316 13:15:36.509554   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:15:36.509554   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:15:39.063104   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:44.073362   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:44.306846   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:15:44.351915   12552 logs.go:279] 1 containers: [4e449087641a]
+I0316 13:15:44.372361   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:15:44.416254   12552 logs.go:279] 1 containers: [0caec22bde69]
+I0316 13:15:44.433525   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:15:44.483508   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:15:44.506323   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:15:44.558529   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:15:44.585088   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:15:44.633507   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:15:44.646551   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:15:44.679647   12552 logs.go:279] 0 containers: []
+W0316 13:15:44.679647   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:15:44.694581   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:15:44.733777   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:15:44.747710   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:15:44.794416   12552 logs.go:279] 2 containers: [eae75cb6f565 eca8f477fef3]
+I0316 13:15:44.794416   12552 logs.go:124] Gathering logs for kube-apiserver [4e449087641a] ...
+I0316 13:15:44.794416   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 4e449087641a"
+I0316 13:15:44.843434   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:15:44.843434   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:15:44.883665   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:15:44.883665   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:15:44.922689   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:15:44.922689   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:15:44.995329   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:15:44.995329   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:15:45.113976   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:15:45.113976   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:15:45.266011   12552 logs.go:124] Gathering logs for etcd [0caec22bde69] ...
+I0316 13:15:45.266011   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 0caec22bde69"
+I0316 13:15:45.321422   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:15:45.321422   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:15:45.363827   12552 logs.go:124] Gathering logs for kube-controller-manager [eca8f477fef3] ...
+I0316 13:15:45.363827   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eca8f477fef3"
+I0316 13:15:45.401789   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:15:45.401789   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:15:45.450903   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:15:45.450903   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:15:45.475077   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:15:45.475077   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:15:45.574441   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:15:44.249248  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.250309  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.252041  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.254018  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.255910  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:15:44.249248  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.250309  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.252041  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.254018  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:44.255910  346189 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:15:45.574441   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:15:45.574441   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:15:45.605601   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:15:45.605601   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:15:48.154710   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:15:53.171626   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:15:53.289121   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:15:53.331810   12552 logs.go:279] 1 containers: [4e449087641a]
+I0316 13:15:53.350565   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:15:53.391893   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:15:53.408115   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:15:53.444950   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:15:53.459593   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:15:53.495535   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:15:53.508422   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:15:53.544738   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:15:53.557846   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:15:53.588483   12552 logs.go:279] 0 containers: []
+W0316 13:15:53.588556   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:15:53.601605   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:15:53.631470   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:15:53.645387   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:15:53.677728   12552 logs.go:279] 2 containers: [eae75cb6f565 eca8f477fef3]
+I0316 13:15:53.677728   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:15:53.677728   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:15:53.738767   12552 logs.go:124] Gathering logs for kube-controller-manager [eca8f477fef3] ...
+I0316 13:15:53.738767   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eca8f477fef3"
+I0316 13:15:53.796494   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:15:53.796494   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:15:53.866208   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:15:53.866208   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:15:54.007638   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:15:54.007638   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:15:54.049723   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:15:54.049723   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:15:54.088001   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:15:54.088026   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:15:54.122135   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:15:54.122135   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:15:54.209383   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:15:54.209383   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:15:54.246829   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:15:54.246829   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:15:54.288361   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:15:54.288361   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:15:54.329325   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:15:54.329325   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:15:54.358557   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:15:54.358557   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:15:54.451307   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:15:53.126511  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.127065  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.129013  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.131034  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.133059  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:15:53.126511  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.127065  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.129013  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.131034  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:15:53.133059  346456 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:15:54.451307   12552 logs.go:124] Gathering logs for kube-apiserver [4e449087641a] ...
+I0316 13:15:54.451307   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 4e449087641a"
+I0316 13:15:56.992771   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:16:01.994234   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:16:02.288625   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:16:02.328862   12552 logs.go:279] 2 containers: [319bf9ec842f 4e449087641a]
+I0316 13:16:02.342569   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:16:02.391577   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:16:02.405177   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:16:02.442488   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:16:02.455247   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:16:02.485544   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:16:02.497902   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:16:02.529281   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:16:02.543926   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:16:02.574096   12552 logs.go:279] 0 containers: []
+W0316 13:16:02.574096   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:16:02.587090   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:16:02.624938   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:16:02.638315   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:16:02.668917   12552 logs.go:279] 1 containers: [eae75cb6f565]
+I0316 13:16:02.668917   12552 logs.go:124] Gathering logs for kube-apiserver [319bf9ec842f] ...
+I0316 13:16:02.668917   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 319bf9ec842f"
+I0316 13:16:02.704603   12552 logs.go:124] Gathering logs for kube-apiserver [4e449087641a] ...
+I0316 13:16:02.704603   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 4e449087641a"
+I0316 13:16:02.763774   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:16:02.763774   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:16:02.819439   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:16:02.819482   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:16:02.845796   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:16:02.845796   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:16:02.906241   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:16:02.906241   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:16:02.948495   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:16:02.948495   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:16:03.008376   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:16:03.008376   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:16:03.081423   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:16:03.081423   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:16:03.232629   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:16:03.232629   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:16:03.273928   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:16:03.273928   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:16:03.321185   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:16:03.321185   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:16:03.363151   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:16:03.363200   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:16:03.465060   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:16:03.465060   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+I0316 13:16:20.076077   12552 ssh_runner.go:235] Completed: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": (16.6110176s)
+W0316 13:16:20.079268   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:16:12.252409  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": net/http: TLS handshake timeout
+E0316 10:16:18.757070  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused - error from a previous attempt: read tcp 127.0.0.1:44372->127.0.0.1:8443: read: connection reset by peer
+E0316 10:16:18.758475  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:18.759706  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:18.760783  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:16:12.252409  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": net/http: TLS handshake timeout
+E0316 10:16:18.757070  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused - error from a previous attempt: read tcp 127.0.0.1:44372->127.0.0.1:8443: read: connection reset by peer
+E0316 10:16:18.758475  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:18.759706  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:18.760783  346737 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:16:22.598684   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:16:27.610279   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:16:27.799633   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:16:27.859798   12552 logs.go:279] 1 containers: [319bf9ec842f]
+I0316 13:16:27.881095   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:16:27.931472   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:16:27.947789   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:16:27.992767   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:16:28.007931   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:16:28.049078   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:16:28.065771   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:16:28.100061   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:16:28.114701   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:16:28.154347   12552 logs.go:279] 0 containers: []
+W0316 13:16:28.154347   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:16:28.168238   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:16:28.208173   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:16:28.223339   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:16:28.258455   12552 logs.go:279] 2 containers: [848dd8b4509f eae75cb6f565]
+I0316 13:16:28.258455   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:16:28.258455   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:16:28.387081   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:16:28.387081   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:16:28.418177   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:16:28.418177   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:16:28.523000   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:16:27.198360  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.198862  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.200898  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.203083  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.203750  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:16:27.198360  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.198862  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.200898  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.203083  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:27.203750  347013 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:16:28.523000   12552 logs.go:124] Gathering logs for kube-controller-manager [848dd8b4509f] ...
+I0316 13:16:28.523000   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 848dd8b4509f"
+I0316 13:16:28.560528   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:16:28.560528   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:16:28.598490   12552 logs.go:124] Gathering logs for kube-apiserver [319bf9ec842f] ...
+I0316 13:16:28.598490   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 319bf9ec842f"
+I0316 13:16:28.648577   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:16:28.649126   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:16:28.691396   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:16:28.691396   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:16:28.763945   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:16:28.763945   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:16:28.861635   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:16:28.861635   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:16:28.932449   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:16:28.932449   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:16:29.016529   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:16:29.016577   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:16:29.054171   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:16:29.054171   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:16:29.099521   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:16:29.099521   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:16:31.680923   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:16:36.694461   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:16:36.812383   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:16:36.861402   12552 logs.go:279] 1 containers: [319bf9ec842f]
+I0316 13:16:36.882286   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:16:36.928101   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:16:36.949198   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:16:36.996744   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:16:37.016967   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:16:37.059424   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:16:37.072325   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:16:37.124720   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:16:37.149893   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:16:37.195224   12552 logs.go:279] 0 containers: []
+W0316 13:16:37.195224   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:16:37.209048   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:16:37.252734   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:16:37.281401   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:16:37.337508   12552 logs.go:279] 2 containers: [848dd8b4509f eae75cb6f565]
+I0316 13:16:37.337508   12552 logs.go:124] Gathering logs for kube-apiserver [319bf9ec842f] ...
+I0316 13:16:37.337508   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 319bf9ec842f"
+I0316 13:16:37.412132   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:16:37.412132   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:16:37.520051   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:16:37.520051   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:16:37.569875   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:16:37.569875   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:16:37.686725   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:16:37.686725   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:16:37.837969   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:16:37.837969   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:16:37.899284   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:16:37.899284   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:16:37.944517   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:16:37.944517   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:16:38.010558   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:16:38.010558   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:16:38.106974   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:16:38.106974   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:16:38.156601   12552 logs.go:124] Gathering logs for kube-controller-manager [848dd8b4509f] ...
+I0316 13:16:38.156601   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 848dd8b4509f"
+I0316 13:16:38.205017   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:16:38.205017   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:16:38.231141   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:16:38.231141   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:16:38.285058   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:16:38.285058   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:16:38.398041   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:16:37.071030  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.072079  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.073771  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.074799  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.076260  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:16:37.071030  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.072079  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.073771  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.074799  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:37.076260  347242 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:16:40.899640   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:16:45.912681   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:16:46.295809   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:16:46.333336   12552 logs.go:279] 1 containers: [319bf9ec842f]
+I0316 13:16:46.348292   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:16:46.404768   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:16:46.416888   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:16:46.452805   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:16:46.465376   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:16:46.511107   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:16:46.524023   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:16:46.559032   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:16:46.581722   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:16:46.614414   12552 logs.go:279] 0 containers: []
+W0316 13:16:46.614414   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:16:46.642637   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:16:46.680887   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:16:46.699670   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:16:46.760660   12552 logs.go:279] 2 containers: [848dd8b4509f eae75cb6f565]
+I0316 13:16:46.760660   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:16:46.760660   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:16:46.831265   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:16:46.831265   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:16:46.884189   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:16:46.884255   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:16:46.942010   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:16:46.942010   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:16:47.010286   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:16:47.010286   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:16:47.057940   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:16:47.057940   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:16:47.170503   12552 logs.go:124] Gathering logs for kube-apiserver [319bf9ec842f] ...
+I0316 13:16:47.170503   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 319bf9ec842f"
+I0316 13:16:47.229450   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:16:47.229450   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:16:47.258561   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:16:47.258561   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:16:47.364370   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:16:46.039846  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.040252  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.042719  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.043316  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.045456  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:16:46.039846  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.040252  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.042719  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.043316  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:46.045456  347380 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:16:47.364370   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:16:47.364370   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:16:47.398020   12552 logs.go:124] Gathering logs for kube-controller-manager [848dd8b4509f] ...
+I0316 13:16:47.398020   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 848dd8b4509f"
+I0316 13:16:47.432966   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:16:47.432966   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:16:47.481722   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:16:47.481722   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:16:47.616144   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:16:47.616144   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:16:50.186918   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:16:55.200791   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:16:55.290073   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:16:55.337355   12552 logs.go:279] 1 containers: [319bf9ec842f]
+I0316 13:16:55.357804   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:16:55.400934   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:16:55.419075   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:16:55.465605   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:16:55.489651   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:16:55.531946   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:16:55.554730   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:16:55.595203   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:16:55.612269   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:16:55.647655   12552 logs.go:279] 0 containers: []
+W0316 13:16:55.647655   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:16:55.670971   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:16:55.715156   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:16:55.735846   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:16:55.780340   12552 logs.go:279] 2 containers: [848dd8b4509f eae75cb6f565]
+I0316 13:16:55.780340   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:16:55.780340   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:16:55.830556   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:16:55.830556   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:16:56.000148   12552 logs.go:124] Gathering logs for kube-apiserver [319bf9ec842f] ...
+I0316 13:16:56.000148   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 319bf9ec842f"
+I0316 13:16:56.048845   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:16:56.048845   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:16:56.098397   12552 logs.go:124] Gathering logs for kube-controller-manager [848dd8b4509f] ...
+I0316 13:16:56.098397   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 848dd8b4509f"
+I0316 13:16:56.142608   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:16:56.142608   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:16:56.233674   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:16:56.233674   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:16:56.284375   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:16:56.284375   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:16:56.306803   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:16:56.306803   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+W0316 13:16:56.395978   12552 logs.go:131] failed describe nodes: command: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E0316 10:16:55.070161  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.071072  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.073078  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.074955  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.076996  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+ output: 
+** stderr ** 
+E0316 10:16:55.070161  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.071072  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.073078  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.074955  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+E0316 10:16:55.076996  347529 memcache.go:238] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp 127.0.0.1:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+** /stderr **
+I0316 13:16:56.395978   12552 logs.go:124] Gathering logs for coredns [9e6579d08932] ...
+I0316 13:16:56.395978   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9e6579d08932"
+I0316 13:16:56.431595   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:16:56.431595   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:16:56.467091   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:16:56.467091   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:16:56.524214   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:16:56.524214   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:16:56.558034   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:16:56.558034   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:16:59.120820   12552 api_server.go:252] Checking apiserver healthz at https://172.17.139.84:8443/healthz ...
+I0316 13:17:04.123735   12552 api_server.go:268] stopped: https://172.17.139.84:8443/healthz: Get "https://172.17.139.84:8443/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+I0316 13:17:04.299306   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-apiserver --format={{.ID}}
+I0316 13:17:04.350735   12552 logs.go:279] 1 containers: [319bf9ec842f]
+I0316 13:17:04.370976   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_etcd --format={{.ID}}
+I0316 13:17:04.413958   12552 logs.go:279] 1 containers: [6da1a2255ad8]
+I0316 13:17:04.437253   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_coredns --format={{.ID}}
+I0316 13:17:04.486868   12552 logs.go:279] 1 containers: [9e6579d08932]
+I0316 13:17:04.509075   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-scheduler --format={{.ID}}
+I0316 13:17:04.556318   12552 logs.go:279] 2 containers: [c8a3aada4230 9f2b3808450b]
+I0316 13:17:04.578975   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-proxy --format={{.ID}}
+I0316 13:17:04.629798   12552 logs.go:279] 1 containers: [93885efbb627]
+I0316 13:17:04.662556   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kubernetes-dashboard --format={{.ID}}
+I0316 13:17:04.705252   12552 logs.go:279] 0 containers: []
+W0316 13:17:04.705252   12552 logs.go:281] No container was found matching "kubernetes-dashboard"
+I0316 13:17:04.720178   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_storage-provisioner --format={{.ID}}
+I0316 13:17:04.762410   12552 logs.go:279] 1 containers: [52c89afb38d0]
+I0316 13:17:04.783174   12552 ssh_runner.go:195] Run: docker ps -a --filter=name=k8s_kube-controller-manager --format={{.ID}}
+I0316 13:17:04.824662   12552 logs.go:279] 2 containers: [848dd8b4509f eae75cb6f565]
+I0316 13:17:04.824662   12552 logs.go:124] Gathering logs for kubelet ...
+I0316 13:17:04.824662   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u kubelet -n 400"
+I0316 13:17:04.974596   12552 logs.go:124] Gathering logs for kube-proxy [93885efbb627] ...
+I0316 13:17:04.974596   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 93885efbb627"
+I0316 13:17:05.050243   12552 logs.go:124] Gathering logs for storage-provisioner [52c89afb38d0] ...
+I0316 13:17:05.050243   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 52c89afb38d0"
+I0316 13:17:05.089732   12552 logs.go:124] Gathering logs for kube-controller-manager [848dd8b4509f] ...
+I0316 13:17:05.089732   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 848dd8b4509f"
+I0316 13:17:05.130907   12552 logs.go:124] Gathering logs for Docker ...
+I0316 13:17:05.130907   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo journalctl -u docker -n 400"
+I0316 13:17:05.228962   12552 logs.go:124] Gathering logs for container status ...
+I0316 13:17:05.228962   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo `which crictl || echo crictl` ps -a || sudo docker ps -a"
+I0316 13:17:05.289534   12552 logs.go:124] Gathering logs for dmesg ...
+I0316 13:17:05.289534   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo dmesg -PH -L=never --level warn,err,crit,alert,emerg | tail -n 400"
+I0316 13:17:05.314036   12552 logs.go:124] Gathering logs for kube-scheduler [c8a3aada4230] ...
+I0316 13:17:05.314036   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 c8a3aada4230"
+I0316 13:17:05.396413   12552 logs.go:124] Gathering logs for etcd [6da1a2255ad8] ...
+I0316 13:17:05.396413   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 6da1a2255ad8"
+I0316 13:17:05.429952   12552 logs.go:124] Gathering logs for kube-scheduler [9f2b3808450b] ...
+I0316 13:17:05.429952   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 9f2b3808450b"
+I0316 13:17:05.471080   12552 logs.go:124] Gathering logs for kube-controller-manager [eae75cb6f565] ...
+I0316 13:17:05.471080   12552 ssh_runner.go:195] Run: /bin/bash -c "docker logs --tail 400 eae75cb6f565"
+I0316 13:17:05.504587   12552 logs.go:124] Gathering logs for describe nodes ...
+I0316 13:17:05.504587   12552 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.26.1/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig"
+
+* 
