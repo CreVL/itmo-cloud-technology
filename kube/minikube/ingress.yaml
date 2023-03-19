@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cloud-service-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: cloud-service.local
+    http:
+      paths:
+      - path: /cloud
+        pathType: Prefix
+        backend:
+          service:
+            name: cloud-service-deployment
+            port:
+              number: 8080

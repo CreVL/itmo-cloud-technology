@@ -15,12 +15,7 @@ spec:
     spec:
       containers:
         - image: itmo-cloud-technology:latest
-          name: cloud-service
+          name: itmo-cloud-technology
           imagePullPolicy: Never
           ports:
           - containerPort: 8080
-          resources:
-            requests:
-              cpu: "150m"
-            limits:
-              cpu: "200m"

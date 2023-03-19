@@ -1,2 +1,7 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+
+# Задание курса "Облачные технологии-ITMO"
+
+Написал простое "приложение" с запросом по HTTP.
+Создал deployment, настроил доступ через loadbalancer, настроил autoscaling.
+
+
